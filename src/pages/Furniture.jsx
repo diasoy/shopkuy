@@ -1,4 +1,4 @@
-import CatFurniture from "../layouts/CatFurniture"
+import CatFurniture from "../Category/CatFurniture"
 
 const Furniture = () => {
     return (

@@ -1,4 +1,4 @@
-import CatMiscellaneous from "../layouts/CatMiscellaneous";
+import CatMiscellaneous from "../Category/CatMiscellaneous";
 
 const Miscellaneous = () => {
     return (<>

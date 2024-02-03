@@ -1,4 +1,4 @@
-import CatElectronics from "../layouts/CatElectronics";
+import CatElectronics from "../Category/CatElectronics";
 
 const Electronics = () => {
   return <>
