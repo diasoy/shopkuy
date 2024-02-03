@@ -1,23 +1,23 @@
-import Navbar from "../navbar/Navbar"
+import Navbar from "../navbar/Navbar";
 import products from "../utils/data";
 
 const CatFurniture = () => {
-    return (
-        <>
-            <Navbar />
-      
-        <div>
-          <div className="bg-zinc-800 text-white">
-            <div>
-              <h1 className="text-center font-bold py-5 text-xl md:text-2xl lg:text-3xl lg:py-12 xl:text-4xl">
-                All Products
-              </h1>
-            </div>
+  return (
+    <>
+      <Navbar />
 
-            {/* shop */}
-            <div className="grid grid-cols-2 mx-2 text-white text-md md:grid-cols-3 xl:grid-cols-4 lg:mx-32">
-                          {products.map((product) => {
-                  if(product.category.name === "Furniture")
+      <div>
+        <div className="bg-zinc-800 text-white">
+          <div>
+            <h1 className="text-center font-bold py-5 text-xl md:text-2xl lg:text-3xl lg:py-12 xl:text-4xl">
+              All Products
+            </h1>
+          </div>
+
+          {/* shop */}
+          <div className="grid grid-cols-2 mx-2 text-white text-md md:grid-cols-3 xl:grid-cols-4 lg:mx-32">
+            {products.map((product) => {
+              if (product.category.name === "Furniture")
                 return (
                   <div key={product.id}>
                     <div className="flex flex-col mx-2 my-4 bg-zinc-100 rounded-lg pb-4">
@@ -43,14 +43,13 @@ const CatFurniture = () => {
                     </div>
                   </div>
                 );
-              })}
-            </div>
-            {/* shop end */}
+            })}
           </div>
+          {/* shop end */}
         </div>
-      
-        </>
-    )
-  }
-  
-  export default CatFurniture
+      </div>
+    </>
+  );
+};
+
+export default CatFurniture;

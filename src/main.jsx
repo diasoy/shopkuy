@@ -9,12 +9,17 @@ import Furniture from "./pages/Furniture.jsx";
 import Miscellaneous from "./pages/Miscellaneous.jsx";
 import Shoes from "./pages/Shoes.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
+import ProductDetail from "./layouts/ProductDetail.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
+  },
+  {
+    path: `/product/:id`,
+    element: <ProductDetail />,
   },
   {
     path: "/clothes",
