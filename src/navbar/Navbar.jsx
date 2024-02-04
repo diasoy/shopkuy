@@ -55,7 +55,7 @@ const Navbar = () => {
           >
             <a href="/">All</a>
             <a href="/clothes">Clothes</a>
-            <a href="/electronics">Electronic</a>
+            <a href="/electronics">Electronics</a>
             <a href="/furniture">Furniture</a>
             <a href="/shoes">Shoes</a>
             <a href="/miscellaneous">Miscellaneous</a>
@@ -78,7 +78,7 @@ const Navbar = () => {
               Clothes
             </a>
             <a href="/electronics" className="hover:bg-green-800 px-3 py-1">
-              Electronic
+              Electronics
             </a>
             <a href="/furniture" className="hover:bg-green-800 px-3 py-1">
               Furniture
