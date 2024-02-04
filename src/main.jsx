@@ -3,14 +3,13 @@ import ReactDOM from "react-dom/client";
 import App from "./pages/App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Electronics from "./pages/electronics.jsx";
-import Clothes from "./pages/clothes.jsx";
+import Electronics from "./pages/Electronics.jsx";
+import Clothes from "./pages/Clothes.jsx";
 import Furniture from "./pages/Furniture.jsx";
 import Miscellaneous from "./pages/Miscellaneous.jsx";
 import Shoes from "./pages/Shoes.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import ProductDetail from "./layouts/ProductDetail.jsx";
-
 const router = createBrowserRouter([
   {
     path: "/",

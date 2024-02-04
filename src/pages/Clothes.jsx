@@ -1,4 +1,5 @@
-import CatClothes from "../Category/CatClothes";
+import CatClothes from "../category/CatClothes";
+
 const Clothes = () => {
   return (
     <>

@@ -1,11 +1,11 @@
-import ProductDetail from "../layouts/ProductDetail"
+import ProductDetail from "../layouts/ProductDetail";
 
 const ProductDetails = () => {
   return (
-      <>
+    <>
       <ProductDetail />
-      </>
-  )
-}
+    </>
+  );
+};
 
-export default ProductDetails
+export default ProductDetails;

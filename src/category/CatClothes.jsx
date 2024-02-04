@@ -1,7 +1,9 @@
+// Products.jsx
+import { Link } from "react-router-dom";
 import Navbar from "../navbar/Navbar";
 import products from "../utils/data";
 
-const CatClothes = () => {
+const Products = () => {
   return (
     <>
       <Navbar />
@@ -16,11 +18,14 @@ const CatClothes = () => {
 
           {/* shop */}
           <div className="grid grid-cols-2 mx-2 text-white text-md md:grid-cols-3 xl:grid-cols-4 lg:mx-32">
-            {products.map((product) => {
-              if (product.category.name === "Clothes")
-                return (
-                  <div key={product.id}>
-                    <div className="flex flex-col mx-2 my-4 bg-zinc-100 rounded-lg pb-4">
+            {products.map(
+              (product) =>
+                product.category.name === "Clothes" && (
+                  <Link key={product.id} to={`/product/${product.id}`}>
+                    <div
+                      key={product.id}
+                      className="flex flex-col mx-2 my-4 bg-zinc-100 rounded-lg pb-4 hover:scale-105 hover:transition-all hover:ease-in-out cursor-pointer"
+                    >
                       <div style={{ position: "relative" }}>
                         <img
                           src={product.images}
@@ -31,6 +36,7 @@ const CatClothes = () => {
                           {product.category.name}
                         </p>
                       </div>
+
                       <div className="flex flex-col items-center text-zinc-900 px-2 pt-5 gap-2">
                         <h2 className="text-center font-medium text-sm md:text-base xl:text-xl">
                           {product.title}
@@ -41,9 +47,9 @@ const CatClothes = () => {
                         </button>
                       </div>
                     </div>
-                  </div>
-                );
-            })}
+                  </Link>
+                )
+            )}
           </div>
           {/* shop end */}
         </div>
@@ -52,4 +58,4 @@ const CatClothes = () => {
   );
 };
 
-export default CatClothes;
+export default Products;

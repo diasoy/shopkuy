@@ -1,13 +1,13 @@
-import CatFurniture from "../Category/CatFurniture"
+import CatFurniture from "../category/CatFurniture";
 
 const Furniture = () => {
-    return (
-        <>
-        <div className="bg-zinc-800 text-white pb-96 font-[Poppins]">
+  return (
+    <>
+      <div className="bg-zinc-800 text-white pb-96 font-[Poppins]">
         <CatFurniture />
       </div>
-        </>
-  )
-}
+    </>
+  );
+};
 
-export default Furniture
+export default Furniture;

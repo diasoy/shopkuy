@@ -17,7 +17,7 @@ const ProductDetail = () => {
     <>
       <div className="bg-zinc-800 text-white py-4">
         <button
-          className="ml-4 bg-green-700 px-3 py-1 rounded-md fixed top-0 left-0 mt-4 ml-4 text-zinc-100"
+          className="bg-green-700 px-3 py-1 rounded-md fixed top-0 left-0 mt-4 ml-4 text-zinc-100"
           onClick={() => window.history.back()}
         >
           Kembali

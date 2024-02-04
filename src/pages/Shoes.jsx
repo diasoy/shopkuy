@@ -1,4 +1,4 @@
-import CatShoes from "../Category/CatShoes";
+import CatShoes from "../category/CatShoes";
 
 const Shoes = () => {
   return (
