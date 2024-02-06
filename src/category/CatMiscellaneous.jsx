@@ -1,13 +1,33 @@
 // Products.jsx
 import { Link } from "react-router-dom";
 import Navbar from "../navbar/Navbar";
-import products from "../utils/data";
+import { useState, useEffect } from "react";
+import { products as products2 } from '../utils/data'; // Import products from utils/data.js
+import SearchBar from "../navbar/SearchBar";
 
 const CatMiscellaneous = () => {
+  const [searchValue, setSearchValue] = useState("");
+  const [products, setProducts] = useState(products2);
+
+  useEffect(() => {
+    if (searchValue) {
+      setProducts(
+        products2.filter((product) =>
+          product.title.toLowerCase().includes(searchValue.toLowerCase())
+        )
+      );
+    } else {
+      setProducts(products2);
+    }
+  }, [searchValue]);
+
+  const handleSearch = (value) => {
+    setSearchValue(value);
+  };
   return (
     <>
       <Navbar />
-
+      <SearchBar onSearch={handleSearch} />
       <div>
         <div className="bg-zinc-800 text-white">
           <div>
