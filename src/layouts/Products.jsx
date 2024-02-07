@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import Navbar from "../navbar/Navbar";
 import SearchBar from "../navbar/SearchBar";
 import { useState, useEffect } from "react";
-import { products as products2 } from '../utils/data'; // Import products from utils/data.js
+import { products as products2 } from "../utils/data";
+import AddToCart from "./AddToCart";
 
 const Products = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -25,6 +26,7 @@ const Products = () => {
     setSearchValue(value);
   };
 
+
   return (
     <>
       <Navbar />
@@ -40,6 +42,7 @@ const Products = () => {
           {/* shop */}
           <div className="grid grid-cols-2 mx-2 items-stretch text-white text-md md:grid-cols-3 xl:grid-cols-4 lg:mx-32">
             {products.map((product) => (
+              
               <>
                 <div className="flex flex-col justify-between mx-2 my-4 bg-zinc-100 rounded-lg pb-4 hover:scale-105 hover:transition-all hover:ease-in-out cursor-pointer">
                   <Link key={product.id} to={`/product/${product.id}`}>
@@ -56,7 +59,7 @@ const Products = () => {
                       </div>
 
                       <div className="flex flex-col items-center text-zinc-900 px-2 pt-5 gap-2">
-                        <h2 className="text-center font-medium text-sm md:text-base xl:text-xl">
+                        <h2 className="text-center font-medium text-sm md:text-base xl:text-lg">
                           {product.title}
                         </h2>
                       </div>
@@ -66,9 +69,7 @@ const Products = () => {
                     <h3 className="font-bold text-zinc-900 text-2xl">
                       ${product.price}
                     </h3>
-                    <button className="bg-green-600 hover:bg-green-700 rounded-md text-sm md:text-base xl:text-xl font-medium text-zinc-100 px-3 py-1">
-                      Add to Cart
-                    </button>
+                    <AddToCart product={product} />
                   </div>
                 </div>
               </>

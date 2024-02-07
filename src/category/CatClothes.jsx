@@ -4,6 +4,7 @@ import Navbar from "../navbar/Navbar";
 import { useState, useEffect } from "react";
 import { products as products2 } from '../utils/data'; // Import products from utils/data.js
 import SearchBar from "../navbar/SearchBar";
+import AddToCart from "../layouts/AddToCart";
 
 
 const CatClothes = () => {
@@ -65,9 +66,7 @@ const CatClothes = () => {
                   </Link>
                   <div className="flex flex-col items-center justify-center">
                     <h3 className="font-bold text-zinc-900 text-2xl">${product.price}</h3>
-                    <button className="bg-green-600 hover:bg-green-700 rounded-md text-sm md:text-base xl:text-xl font-medium text-zinc-100 px-3 py-1">
-                      Add to Cart
-                    </button>
+                    <AddToCart product={product} />
                   </div>
                 </div>
               </>
