@@ -15,7 +15,8 @@ const ProductDetail = () => {
   }
 
   const handleAddToCart = () => {
-    setIsItemAdded(!isItemAdded);
+    setIsItemAdded(true);
+    setTimeout(() => setIsItemAdded(false), 2000); 
   };
 
   return (

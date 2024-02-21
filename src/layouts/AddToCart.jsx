@@ -4,7 +4,8 @@ const AddToCart = () => {
   const [isItemAdded, setIsItemAdded] = useState(false);
 
   const handleAddToCart = () => {
-    setIsItemAdded(!isItemAdded);
+    setIsItemAdded(true);
+    setTimeout(() => setIsItemAdded(false), 2000); 
   };
 
   return (

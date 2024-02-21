@@ -10,6 +10,7 @@ import Miscellaneous from "./pages/Miscellaneous.jsx";
 import Shoes from "./pages/Shoes.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import ProductDetail from "./layouts/ProductDetail.jsx";
+import Basket from "./pages/Basket.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -40,10 +41,10 @@ const router = createBrowserRouter([
     path: "/shoes",
     element: <Shoes />,
   },
-  // {
-  //   path: "/basket",
-  //   element: <Basket />,
-  // },
+  {
+    path: "/basket",
+    element: <Basket />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
