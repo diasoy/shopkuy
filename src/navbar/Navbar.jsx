@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,9 +10,9 @@ const Navbar = () => {
         {/* MOBILE MENU */}
         <div className="flex justify-between px-10 py-5 bg-zinc-900 lg:hidden">
           <div>
-            <a href="/" className="font-semibold text-green-500 text-xl ">
+            <Link to="/" className="font-semibold text-green-500 text-xl ">
               ShopKuy
-            </a>
+            </Link>
           </div>
           <div>
             <button
@@ -53,51 +54,50 @@ const Navbar = () => {
             }
             style={{ zIndex: 9999 }}
           >
-            <a href="/">All</a>
-            <a href="/clothes">Clothes</a>
-            <a href="/electronics">Electronics</a>
-            <a href="/furniture">Furniture</a>
-            <a href="/shoes">Shoes</a>
-            <a href="/miscellaneous">Miscellaneous</a>
-            <a href="/basket">Basket</a>
+            <Link to="/">All</Link>
+            <Link to="/clothes">Clothes</Link>
+            <Link to="/electronics">Electronics</Link>
+            <Link to="/furniture">Furniture</Link>
+            <Link to="/shoes">Shoes</Link>
+            <Link to="/miscellaneous">Miscellaneous</Link>
+            <Link to="/basket">Basket</Link>
           </div>
         </div>
 
         {/* WEB MENU */}
         <div className="hidden lg:flex justify-between items-center gap-4 w-full bg-zinc-900 px-32 py-8 text-white">
           <div>
-            <a href="/" className="text-2xl font-semibold text-green-500">
+            <Link to="/" className="text-2xl font-semibold text-green-500">
               ShopKuy
-            </a>
+            </Link>
           </div>
           <div className="flex gap-1 text-base xl:text-xl">
-            <a href="/" className="hover:bg-green-800 px-3 py-1">
+            <Link to="/" className="hover:bg-green-800 px-3 py-1">
               All
-            </a>
-            <a href="/clothes" className="hover:bg-green-800 px-3 py-1">
+            </Link>
+            <Link to="/clothes" className="hover:bg-green-800 px-3 py-1">
               Clothes
-            </a>
-            <a href="/electronics" className="hover:bg-green-800 px-3 py-1">
+            </Link>
+            <Link to="/electronics" className="hover:bg-green-800 px-3 py-1">
               Electronics
-            </a>
-            <a href="/furniture" className="hover:bg-green-800 px-3 py-1">
+            </Link>
+            <Link to="/furniture" className="hover:bg-green-800 px-3 py-1">
               Furniture
-            </a>
-            <a href="/shoes" className="hover:bg-green-800 px-3 py-1">
+            </Link>
+            <Link to="/shoes" className="hover:bg-green-800 px-3 py-1">
               Shoes
-            </a>
-            <a href="/miscellaneous" className="hover:bg-green-800 px-3 py-1">
+            </Link>
+            <Link to="/miscellaneous" className="hover:bg-green-800 px-3 py-1">
               Miscellaneous
-            </a>
-            <a href="/basket" className="hover:bg-green-800 px-3 py-1">
+            </Link>
+            <Link to="/basket" className="hover:bg-green-800 px-3 py-1">
               Basket
-            </a>
+            </Link>
           </div>
         </div>
       </div>
 
       {/* Search */}
-      
     </>
   );
 };
