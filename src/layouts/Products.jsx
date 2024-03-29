@@ -26,7 +26,6 @@ const Products = () => {
     setSearchValue(value);
   };
 
-
   return (
     <>
       <Navbar />
@@ -42,7 +41,6 @@ const Products = () => {
           {/* shop */}
           <div className="grid grid-cols-2 mx-2 items-stretch text-white text-md md:grid-cols-3 xl:grid-cols-4 lg:mx-32">
             {products.map((product) => (
-              
               <>
                 <div className="flex flex-col justify-between mx-2 my-4 bg-zinc-100 rounded-lg pb-4 hover:scale-105 hover:transition-all hover:ease-in-out cursor-pointer">
                   <Link key={product.id} to={`/product/${product.id}`}>
@@ -53,7 +51,7 @@ const Products = () => {
                           alt={product.title}
                           className="w-26 h-26 rounded-lg rounded-b-none"
                         />
-                        <p className="absolute bottom-0 left-2 transform-translate-x-1/2 bg-zinc-500 text-zinc-100 px-2 text-sm py-1 mb-2 rounded-md xl:text-xl">
+                        <p className="absolute bottom-0 left-2 transform-translate-x-1/2 bg-zinc-500 text-zinc-100 px-2 text-sm py-1 mb-2 rounded-md xl:text-lg">
                           {product.category.name}
                         </p>
                       </div>

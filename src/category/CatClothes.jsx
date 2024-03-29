@@ -52,13 +52,13 @@ const CatClothes = () => {
                           alt={product.title}
                           className="w-26 h-26 rounded-lg rounded-b-none"
                         />
-                        <p className="absolute bottom-0 left-2 transform-translate-x-1/2 bg-zinc-500 text-zinc-100 px-2 text-sm py-1 mb-2 rounded-md xl:text-xl">
+                        <p className="absolute bottom-0 left-2 transform-translate-x-1/2 bg-zinc-500 text-zinc-100 px-2 text-sm py-1 mb-2 rounded-md xl:text-lg">
                           {product.category.name}
                         </p>
                       </div>
 
                       <div className="flex flex-col items-center text-zinc-900 px-2 pt-5 gap-2">
-                        <h2 className="text-center font-medium text-sm md:text-base xl:text-xl">
+                        <h2 className="text-center font-medium text-sm md:text-base xl:text-lg">
                           {product.title}
                         </h2>
                       </div>
